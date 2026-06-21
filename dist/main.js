@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/contact.js"
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadContact: () => (/* binding */ loadContact)\n/* harmony export */ });\nfunction loadContact() {\n    const content = document.querySelector('#content');\n    content.innerHTML = '';\n\n    const heading = document.createElement('h1');\n    heading.textContent = \"Contact Us\";\n\n    const contactCard = document.createElement('div');\n    contactCard.classList.add('contact-card');\n\n    const phone = document.createElement('p');\n    phone.textContent = \"📞 Phone: +673 234-5678\";\n\n    const email = document.createElement('p');\n    email.textContent = \"✉️ Email: hello@cozycornerbistro.com\";\n\n    const address = document.createElement('p');\n    address.textContent = \"📍 Location: Simpang 123, Jalan Gadong, Bandar Seri Begawan, Brunei\"\n\n    contactCard.appendChild(phone);\n    contactCard.appendChild(email);\n    contactCard.appendChild(address);\n\n    content.appendChild(heading);\n    content.appendChild(contactCard);\n}\n\n//# sourceURL=webpack://project-restaurant-page/./src/contact.js?\n}");
+
+/***/ },
+
 /***/ "./src/home.js"
 /*!*********************!*\
   !*** ./src/home.js ***!
@@ -26,7 +36,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \**********************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n\n\n(0,_home_js__WEBPACK_IMPORTED_MODULE_0__.loadHome)();\n\n//# sourceURL=webpack://project-restaurant-page/./src/index.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\n\n\n\n(0,_home_js__WEBPACK_IMPORTED_MODULE_0__.loadHome)();\n\nconst homeBtn = document.querySelector('#home-btn');\nconst menuBtn = document.querySelector('#menu-btn');\nconst contactBtn = document.querySelector('#contact-btn');\n\nhomeBtn.addEventListener('click', _home_js__WEBPACK_IMPORTED_MODULE_0__.loadHome);\nmenuBtn.addEventListener('click', _menu_js__WEBPACK_IMPORTED_MODULE_1__.loadMenu);\ncontactBtn.addEventListener('click', _contact_js__WEBPACK_IMPORTED_MODULE_2__.loadContact);\n\n//# sourceURL=webpack://project-restaurant-page/./src/index.js?\n}");
+
+/***/ },
+
+/***/ "./src/menu.js"
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadMenu: () => (/* binding */ loadMenu)\n/* harmony export */ });\nfunction loadMenu() {\n    const content = document.querySelector('#content');\n    content.innerHTML = '';\n\n    const heading = document.createElement('h1');\n    heading.textContent = \"Our Menu\";\n    content.appendChild(heading);\n\n    const menuContainer = document.createElement('div');\n    menuContainer.classList.add('menu-grid');\n\n    function createMenuItem(name, price, description) {\n        const itemDiv = document.createElement('div');\n        itemDiv.classList.add('menu-item');\n\n        const itemName = document.createElement('h3');\n        itemName.textContent = `${name} - ${price}`;\n\n        const itemDesc = document.createElement('p');\n        itemDesc.textContent = description;\n\n        itemDiv.appendChild(itemName);\n        itemDiv.appendChild(itemDesc);\n\n        return itemDiv;\n    }\n\n    const dish1 = createMenuItem(\"Truffle Mushroom Pasta\", \"$18\", \"Creamy fettuccine tossed with wild mushrooms and white truffle oil.\");\n    const dish2 = createMenuItem(\"Classic Bistro Burger\", \"$16\", \"Prime beef patty, aged cheddar, special house sauce, served with rosemary fries.\");\n    const dish3 = createMenuItem(\"Artisanal Avocado Toast\", \"$12\", \"Sourdough bread topped with smashed avocado, cherry tomatoes, and a poached egg.\")\n\n    menuContainer.appendChild(dish1);\n    menuContainer.appendChild(dish2);\n    menuContainer.appendChild(dish3);\n\n    content.appendChild(menuContainer);\n\n}\n\n//# sourceURL=webpack://project-restaurant-page/./src/menu.js?\n}");
 
 /***/ }
 
